@@ -4,9 +4,9 @@ const GET_COUNTRY_DATA = '/react-capstone/covid/GET_COUNTRY_DATA';
 
 const baseUrl = process.env.REACT_APP_BASE_URL;
 
-export const getCountryDetailsAction = () => async (dispatch) => {
+export const getCountryDetailsAction = (endPoint) => async (dispatch) => {
   try {
-    const data = await axios.get(`${baseUrl}`);
+    const data = await axios.get(`${baseUrl}/${endPoint}`);
     console.log(data);
     dispatch({ type: GET_COUNTRY_DATA, payload: data });
   } catch (error) {
