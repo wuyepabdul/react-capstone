@@ -8,7 +8,9 @@ export const getCountryDetailsAction = (endPoint) => async (dispatch) => {
   try {
     const data = await axios.get(`${baseUrl}/${endPoint}`);
     console.log(data);
-    dispatch({ type: GET_COUNTRY_DATA, payload: data });
+    if (data.status === 200) {
+      dispatch({ type: GET_COUNTRY_DATA, payload: data.data });
+    }
   } catch (error) {
     console.log('error', error.message);
   }

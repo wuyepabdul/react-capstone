@@ -1,8 +1,9 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Country from './components/Country';
 import NavBar from './components/NavBar';
 import CountriesList from './pages/CountriesList';
-import Country from './pages/Country';
+// import CountryDetails from './pages/CountryDetails';
 
 const App = () => (
   <BrowserRouter>

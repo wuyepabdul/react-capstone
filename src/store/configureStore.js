@@ -7,7 +7,7 @@ import countryReducer from './country/country';
 
 const reducers = combineReducers({
   countriesList: countriesListReducer,
-  country: countryReducer,
+  countryDetails: countryReducer,
 });
 
 const middleWares = [thunk, logger];

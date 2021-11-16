@@ -6,9 +6,8 @@ const baseUrl = process.env.REACT_APP_BASE_URL;
 
 export const getCountriesAction = () => async (dispatch) => {
   try {
-    const { data: { countries } } = await axios.get(`${baseUrl}/api/countries`);
-    console.log('data', countries);
-    dispatch({ type: GET_COVID_COUNTRIES, payload: countries });
+    const { data } = await axios.get(`${baseUrl}/api/countries`);
+    dispatch({ type: GET_COVID_COUNTRIES, payload: data.countries });
   } catch (error) {
     console.log('error', error.message);
   }
