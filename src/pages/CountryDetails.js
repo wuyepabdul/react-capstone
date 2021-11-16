@@ -1,17 +1,49 @@
 import React from 'react';
-import { useParams } from 'react-router';
+import { useNavigate, useParams } from 'react-router';
 import { useSelector } from 'react-redux';
 
 const CountryDetails = () => {
+  const navigate = useNavigate();
   const countryDetails = useSelector((state) => state.countryDetails);
-  const params = useParams();
+  const { countryName } = useParams();
+  countryName.toLowerCase().trim();
+
+  const handleClick = () => {
+    navigate('/');
+  };
 
   return (
-    <div>
-      Country details
-      {console.log('countryDetails', countryDetails)}
-      {console.log('params', params)}
-    </div>
+    <>
+      {countryDetails && (
+        <div className="country-details">
+          <div>
+            <button type="button" onClick={handleClick}>
+              {' '}
+              back
+              {' '}
+            </button>
+          </div>
+          <div>
+            <h1>{countryName.toUpperCase()}</h1>
+            affected regions -
+            {' '}
+            {countryDetails && countryDetails[`${countryName}`].length}
+          </div>
+          Country details
+          {countryDetails[`${countryName}`].length > 0 ? (
+            countryDetails[`${countryName}`].map((region) => (
+              <div className="region" key={region.id}>
+                {' '}
+                <h1>{region.name}</h1>
+                {' '}
+              </div>
+            ))
+          ) : (
+            <h1>No available info yet</h1>
+          )}
+        </div>
+      )}
+    </>
   );
 };
 

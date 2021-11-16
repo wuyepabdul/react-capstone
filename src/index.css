@@ -18,9 +18,15 @@ body {
   gap: 5px;
 }
 
-.country-div {
+.country-div,
+.region {
   margin: 10px 0;
   background-color: burlywood;
+}
+
+.country-details {
+  width: 50%;
+  margin: 0 auto;
 }
 
 .country-div:hover {

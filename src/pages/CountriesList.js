@@ -18,12 +18,16 @@ const CountriesList = () => {
 
   const handleClick = (endPoint, id) => {
     dispatch(getCountryDetailsAction(endPoint));
-    navigate(`/country/${id}`);
+    setTimeout(() => {
+      navigate(`/country/${id}`);
+    }, 1000);
   };
 
   const handleKeyDown = (endPoint, id) => {
     dispatch(getCountryDetailsAction(endPoint));
-    navigate(`/country/${id}`);
+    setTimeout(() => {
+      navigate(`/country/${id}`);
+    }, 1000);
   };
   return (
     <div className="countries-container">
