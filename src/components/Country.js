@@ -3,8 +3,8 @@ import PropsType from 'prop-types';
 
 const Country = ({ country, handleKeyDown, handleClick }) => (
   <div
-    onClick={() => handleClick(country.links[0].href)}
-    onKeyDown={() => handleKeyDown(country.links[0].href)}
+    onClick={() => handleClick(country.links[0].href, country.id)}
+    onKeyDown={() => handleKeyDown(country.links[0].href, country.id)}
     className="country-div"
     key={country.id}
     role="button"
@@ -16,6 +16,7 @@ const Country = ({ country, handleKeyDown, handleClick }) => (
       <p>number</p>
     </div>
   </div>
+
 );
 
 Country.propTypes = {

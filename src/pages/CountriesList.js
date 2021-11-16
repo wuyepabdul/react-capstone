@@ -1,12 +1,13 @@
 import React, { useEffect } from 'react';
-import PropsType from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import Country from '../components/Country';
 import { getCountriesAction } from '../store/countries/countriesList';
 import { getCountryDetailsAction } from '../store/country/country';
 
-const CountriesList = ({ history }) => {
+const CountriesList = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const countriesList = useSelector((state) => state.countriesList);
 
   useEffect(() => {
@@ -15,17 +16,17 @@ const CountriesList = ({ history }) => {
     }
   }, [dispatch]);
 
-  const handleClick = (endPoint) => {
+  const handleClick = (endPoint, id) => {
     dispatch(getCountryDetailsAction(endPoint));
-    history.push('/country');
+    navigate(`/country/${id}`);
   };
 
-  const handleKeyDown = (endPoint) => {
+  const handleKeyDown = (endPoint, id) => {
     dispatch(getCountryDetailsAction(endPoint));
-    history.push('/country');
+    navigate(`/country/${id}`);
   };
   return (
-    <div>
+    <div className="countries-container">
       {countriesList
         && countriesList.map((country) => (
           <Country
@@ -37,14 +38,6 @@ const CountriesList = ({ history }) => {
         ))}
     </div>
   );
-};
-
-CountriesList.propTypes = {
-  history: PropsType.instanceOf(Object),
-};
-
-CountriesList.defaultProps = {
-  history: PropsType.instanceOf(Object),
 };
 
 export default CountriesList;

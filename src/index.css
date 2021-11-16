@@ -6,11 +6,24 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: beige;
+}
+
+.countries-container {
+  width: 50%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px;
+}
+
 .country-div {
-  background-color: aqua;
   margin: 10px 0;
+  background-color: burlywood;
 }
 
 .country-div:hover {
   cursor: pointer;
+  background-color: rgb(204, 166, 117);
 }

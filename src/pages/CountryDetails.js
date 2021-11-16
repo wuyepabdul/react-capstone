@@ -1,45 +1,18 @@
-/* import React, { useEffect } from 'react';
+import React from 'react';
+import { useParams } from 'react-router';
+import { useSelector } from 'react-redux';
 
-import { useDispatch, useSelector } from 'react-redux';
-import { getCountryDetailsAction } from '../store/country/country';
-
-const CountryDetails = ({ endPoint }) => {
-  const dispatch = useDispatch();
+const CountryDetails = () => {
   const countryDetails = useSelector((state) => state.countryDetails);
+  const params = useParams();
 
-  useEffect(() => {
-    console.log('endPoint', endPoint);
-    if (!countryDetails) {
-      dispatch(getCountryDetailsAction(endPoint));
-    }
-  }, []);
   return (
     <div>
       Country details
       {console.log('countryDetails', countryDetails)}
+      {console.log('params', params)}
     </div>
   );
-};
-
-CountryDetails.propTypes = {
-  endPoint: PropTypes.string.isRequired,
-};
-
-export default CountryDetails;
- */
-import React from 'react';
-import PropTypes from 'prop-types';
-
-const CountryDetails = ({ params }) => (
-  <div>
-    country details
-    {console.log('params', params)}
-
-  </div>
-);
-
-CountryDetails.propTypes = {
-  params: PropTypes.string.isRequired,
 };
 
 export default CountryDetails;
