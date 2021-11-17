@@ -7,7 +7,7 @@
 }
 
 body {
-  background-color: rgb(211, 247, 211);
+  background-color: rgb(224, 247, 224);
 }
 
 .navbar {
@@ -24,7 +24,7 @@ body {
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 5px;
+  gap: 15px;
 }
 
 .country-details-container {
@@ -88,7 +88,7 @@ body {
 
 .virus-region {
   padding-left: 30px;
-  color: rgba(255, 0, 0, 0.562);
+  color: rgba(255, 0, 0, 0.479);
 }
 
 .country-div {
