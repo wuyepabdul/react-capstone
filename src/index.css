@@ -7,29 +7,115 @@
 }
 
 body {
-  background-color: beige;
+  background-color: rgb(211, 247, 211);
+}
+
+.navbar {
+  width: 60%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
 }
 
 .countries-container {
-  width: 50%;
+  width: 60%;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 5px;
 }
 
-.country-div,
-.region {
-  margin: 10px 0;
-  background-color: burlywood;
+.country-details-container {
+  width: 60%;
+  margin: 0 auto;
 }
 
-.country-details {
-  width: 50%;
+.country-details-heading {
+  background-color: rgb(177, 130, 70);
+  display: flex;
+  justify-content: space-between;
+  text-align: right;
+  margin: 20px 0;
+  height: 180px;
+  padding: 20px;
+}
+
+.country-details-virus {
+  font-size: 100px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.country-details-header-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+
+.country-name-wrapper h1 {
+  font-size: 40px;
+}
+
+.country-name-wrapper p {
+  width: 100%;
+}
+
+.region {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+  background-color: burlywood;
+  text-align: right;
+  height: 150px;
+  padding: 20px;
+}
+
+.region:nth-child(odd) {
   margin: 0 auto;
+  background-color: rgb(180, 147, 104);
+  text-align: right;
+}
+
+.virus-region {
+  padding-left: 30px;
+}
+
+.country-div {
+  margin: 10px 0;
+  background-color: burlywood;
+  text-align: right;
+  height: 200px;
+  display: flex;
+
+  /* flex-direction: column; */
+  justify-content: space-between;
+  padding: 20px;
 }
 
 .country-div:hover {
   cursor: pointer;
   background-color: rgb(204, 166, 117);
+}
+
+.country {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.covid-virus {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.middle-virus {
+  text-align: center;
+  font-size: 50px;
 }

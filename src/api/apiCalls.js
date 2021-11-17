@@ -11,3 +11,8 @@ export const fetchCountries = async () => {
   const { data } = await axios.get(`${baseUrl}/api/countries`);
   return data;
 };
+
+export const fetchSubRegionsData = async (endpoint) => {
+  const { data } = await axios.get(`${baseUrl}/${endpoint}`);
+  return data;
+};

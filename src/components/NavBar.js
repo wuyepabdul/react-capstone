@@ -1,9 +1,12 @@
 import React from 'react';
 
-const NavBar = () => (
-  <div>
-    Header
-  </div>
+const Navbar = () => (
+  <nav data-testid="navbar" className="navbar">
+    <header className="logo-container">
+      <h1 className="title">Covid-19 Reports</h1>
+    </header>
+    <p>March, 2020</p>
+  </nav>
 );
 
-export default NavBar;
+export default Navbar;

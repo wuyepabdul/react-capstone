@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { fetchCountryData } from '../api/apiCalls';
@@ -9,6 +9,8 @@ import {
 } from '../store/country/country';
 
 const CountriesList = () => {
+  const [message, setMessage] = useState('');
+  const [error, setError] = useState(false);
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const countriesList = useSelector((state) => state.countriesList);
@@ -22,15 +24,18 @@ const CountriesList = () => {
   const handleClick = (endPoint, id) => {
     fetchCountryData(endPoint)
       .then((response) => {
-        console.log(response.countries[0]);
         dispatch(getCountryDetailsAction(response.countries[0]));
         navigate(`/country/${id}`);
       })
-      .catch((error) => console.log(error.message));
+      .catch((error) => {
+        setError(true);
+        setMessage(error.message);
+      });
   };
 
   return (
     <div className="countries-container">
+      {error && <h1>{message}</h1>}
       {countriesList
         && countriesList.map((country) => (
           <Country
