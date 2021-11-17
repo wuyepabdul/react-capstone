@@ -19,6 +19,8 @@ const CountryDetails = () => {
           <div>
             <button type="button" onClick={handleClick}>
               {' '}
+              <i className="fas fa-arrow-circle-left" />
+              {' '}
               back
               {' '}
             </button>
