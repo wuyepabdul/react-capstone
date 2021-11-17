@@ -27,19 +27,8 @@ const CountriesList = () => {
         navigate(`/country/${id}`);
       })
       .catch((error) => console.log(error.message));
-
-    /* setTimeout(() => {
-      navigate(`/country/${id}`);
-    }, 1000); */
   };
 
-  const handleKeyDown = (endPoint, id) => {
-    console.log(endPoint, id);
-    /* dispatch(getCountryDetailsAction(endPoint));
-    setTimeout(() => {
-      navigate(`/country/${id}`);
-    }, 1000); */
-  };
   return (
     <div className="countries-container">
       {countriesList
@@ -48,7 +37,6 @@ const CountriesList = () => {
             key={country.id}
             country={country}
             handleClick={handleClick}
-            handleKeyDown={handleKeyDown}
           />
         ))}
     </div>

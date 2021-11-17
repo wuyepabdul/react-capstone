@@ -1,10 +1,10 @@
 import React from 'react';
 import PropsType from 'prop-types';
 
-const Country = ({ country, handleKeyDown, handleClick }) => (
+const Country = ({ country, handleClick }) => (
   <div
     onClick={() => handleClick(country.links[0].href, country.id)}
-    onKeyDown={() => handleKeyDown(country.links[0].href, country.id)}
+    onKeyDown={(e) => e.key === 'Enter' && handleClick(country.links[0].href, country.id)}
     className="country-div"
     key={country.id}
     role="button"
@@ -16,7 +16,6 @@ const Country = ({ country, handleKeyDown, handleClick }) => (
       <p>number</p>
     </div>
   </div>
-
 );
 
 Country.propTypes = {
@@ -26,13 +25,11 @@ Country.propTypes = {
     id: PropsType.string,
   }),
   handleClick: PropsType.func,
-  handleKeyDown: PropsType.func,
 };
 
 Country.defaultProps = {
-  country: { },
+  country: {},
   handleClick: PropsType.func,
-  handleKeyDown: PropsType.func,
 };
 
 export default Country;
