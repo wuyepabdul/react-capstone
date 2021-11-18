@@ -3,13 +3,13 @@ import { cleanup } from '@testing-library/react';
 import countriesListReducer from '../store/countries/countriesList';
 import countryReducer from '../store/country/country';
 
-describe('AppRouting and Navbar', () => {
+describe('Store reducers', () => {
   afterEach(() => {
     cleanup();
   });
 
   const GET_COUNTRY_DATA = '/react-capstone/covid/GET_COUNTRY_DATA';
-  //   const GET_COVID_COUNTRIES = '/react-capstone/covid/GET_COVID_COUNTRIES';
+  const GET_COVID_COUNTRIES = '/react-capstone/covid/GET_COVID_COUNTRIES';
 
   test('Country reducer returns null as initial state', () => {
     expect(countryReducer(undefined, {})).toBe(null);
@@ -48,9 +48,9 @@ describe('AppRouting and Navbar', () => {
       },
     ];
     const action = {
-      type: GET_COUNTRY_DATA,
+      type: GET_COVID_COUNTRIES,
       payload,
     };
-    expect(countryReducer(initialState, action)).toBe(payload);
+    expect(countriesListReducer(initialState, action)).toBe(payload);
   });
 });
