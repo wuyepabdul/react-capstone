@@ -1,12 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { fetchCountryData } from '../api/apiCalls';
+import { fetchCountriesList, fetchCountryData } from '../api/apiCalls';
 import Country from '../components/Country';
 import { getCountriesAction } from '../store/countries/countriesList';
-import {
-  getCountryDetailsAction,
-} from '../store/country/country';
+import { getCountryDetailsAction } from '../store/country/country';
 
 const CountriesList = () => {
   const [message, setMessage] = useState('');
@@ -17,7 +15,12 @@ const CountriesList = () => {
 
   useEffect(() => {
     if (!countriesList) {
-      dispatch(getCountriesAction());
+      fetchCountriesList()
+        .then((response) => dispatch(getCountriesAction(response.data.countries)))
+        .catch((error) => {
+          setError(true);
+          setMessage(error.message);
+        });
     }
   }, [dispatch]);
 
@@ -34,7 +37,7 @@ const CountriesList = () => {
   };
 
   return (
-    <div className="countries-container">
+    <div data-testid="home-page" className="countries-container">
       {error && <h1>{message}</h1>}
       {countriesList
         && countriesList.map((country) => (

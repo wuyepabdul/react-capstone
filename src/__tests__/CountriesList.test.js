@@ -15,21 +15,9 @@ describe('AppRouting and Navbar', () => {
   const mockStore = configureStore();
   const store = mockStore(initialState);
 
-  test('navbar is loaded and contains elements', () => {
-    render(<Provider store={store}><App /></Provider>);
-    const navBar = screen.getByTestId('navigation-bar');
-    expect(navBar).toBeInTheDocument();
-    expect(navBar.childNodes[0].firstChild.textContent).toBe('Covid-19 Reports');
-    expect(navBar.childNodes[1].textContent).toBe('March, 2020');
-    expect(navBar.childNodes.length).toEqual(2);
-  });
-  test('HomePage/CountriesList Component is loaded', () => {
+  test('CountriesList Component is loaded', () => {
     render(<Provider store={store}><App /></Provider>);
     const countriesListComponent = screen.getByTestId('home-page');
     expect(countriesListComponent).toBeInTheDocument();
-  });
-  test('snapshot of Whole APP', () => {
-    const mainAppComponent = render(<Provider store={store}><App /></Provider>);
-    expect(mainAppComponent).toMatchSnapshot();
   });
 });

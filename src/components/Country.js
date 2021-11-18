@@ -10,6 +10,7 @@ const Country = ({ country, handleClick }) => (
     key={country.id}
     role="button"
     tabIndex={0}
+    data-testid="country-div"
   >
     <CovidVirus />
     <div className="country">

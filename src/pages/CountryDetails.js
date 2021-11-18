@@ -13,7 +13,7 @@ const CountryDetails = () => {
   };
 
   return (
-    <section className="country-details-container">
+    <section data-testid="country-details" className="country-details-container">
       {countryDetails && (
         <div className="country-details">
           <div className="country-details-heading">

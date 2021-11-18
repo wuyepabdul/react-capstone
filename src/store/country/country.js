@@ -1,4 +1,4 @@
-export const GET_COUNTRY_DATA = '/react-capstone/covid/GET_COUNTRY_DATA';
+const GET_COUNTRY_DATA = '/react-capstone/covid/GET_COUNTRY_DATA';
 
 export const getCountryDetailsAction = (data) => ({
   type: GET_COUNTRY_DATA,
