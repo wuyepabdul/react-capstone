@@ -16,7 +16,10 @@ const CountriesList = () => {
   useEffect(() => {
     if (!countriesList) {
       fetchCountriesList()
-        .then((response) => dispatch(getCountriesAction(response.data.countries)))
+        .then((response) => {
+          setError(false);
+          dispatch(getCountriesAction(response.countries));
+        })
         .catch((error) => {
           setError(true);
           setMessage(error.message);
