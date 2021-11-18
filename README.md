@@ -12,7 +12,8 @@ This web application is built to display covid-19 data of countries affected by 
 
 ## Live Demo
 
-[View Life](https://duls-covid-reporter.herokuapp.com/)
+- [View video](https://www.loom.com/share/2f173a6ca1594c60a9e760d6d6ef74a3)
+- [View Demo](https://duls-covid-reporter.herokuapp.com/)
   
 ## Setup
 - Get the link of the repository: [https://github.com/wuyepabdul/react-capstone](https://github.com/wuyepabdul/react-capstone)
