@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const baseUrl = process.env.REACT_APP_BASE_URL;
+const baseUrl = 'https://api.covid19tracking.narrativa.com';
 
 export const fetchCountryData = async (endPoint) => {
   const { data } = await axios.get(`${baseUrl}/${endPoint}`);
