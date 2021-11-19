@@ -6,7 +6,7 @@ const Country = ({ country, handleClick }) => (
   <div
     onClick={() => handleClick(country.links[0].href, country.id)}
     onKeyDown={(e) => e.key === 'Enter' && handleClick(country.links[0].href, country.id)}
-    className="country-div"
+    className="country-div country-div2 country-div3 country-odd-div country-even-div"
     key={country.id}
     role="button"
     tabIndex={0}

@@ -24,7 +24,39 @@ body {
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 15px;
+}
+
+.message {
+  text-align: center;
+  color: orange;
+}
+
+.country-div {
+  background-color: #fff;
+  text-align: right;
+  height: 200px;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.country-odd-div:nth-child(4n-2) {
+  background-color: beige;
+}
+
+.country-div:nth-child(4n-1) {
+  background-color: beige;
+}
+
+.country-div:hover {
+  cursor: pointer;
+  background-color: rgb(252, 243, 243);
+}
+
+.country {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .country-details-container {
@@ -89,27 +121,6 @@ body {
 .virus-region {
   padding-left: 30px;
   color: rgba(255, 0, 0, 0.479);
-}
-
-.country-div {
-  margin: 10px 0;
-  background-color: #fff;
-  text-align: right;
-  height: 200px;
-  display: flex;
-  justify-content: space-between;
-  padding: 20px;
-}
-
-.country-div:hover {
-  cursor: pointer;
-  background-color: rgb(252, 243, 243);
-}
-
-.country {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 
 .covid-virus {

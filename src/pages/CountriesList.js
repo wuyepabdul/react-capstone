@@ -38,19 +38,23 @@ const CountriesList = () => {
         setMessage(error.message);
       });
   };
-
   return (
-    <div data-testid="home-page" className="countries-container">
-      {error && <h1>{message}</h1>}
-      {countriesList
-        && countriesList.map((country) => (
-          <Country
-            key={country.id}
-            country={country}
-            handleClick={handleClick}
-          />
-        ))}
-    </div>
+    <>
+      {error && <h1 className="message">{message}</h1>}
+      <div data-testid="home-page" className="countries-container">
+
+        {countriesList
+        && countriesList
+          .filter((country) => country)
+          .map((country) => (
+            <Country
+              key={country.id}
+              country={country}
+              handleClick={handleClick}
+            />
+          ))}
+      </div>
+    </>
   );
 };
 
