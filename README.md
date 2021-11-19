@@ -11,7 +11,7 @@ This web application is built to display covid-19 data of countries affected by 
 - CSS
 
 ## Live Demo
-- [View video](https://www.loom.com/share/2f173a6ca1594c60a9e760d6d6ef74a3)
+- [View Video](https://www.loom.com/share/2f173a6ca1594c60a9e760d6d6ef74a3)
 - [View Demo](https://duls-covid-reporter.herokuapp.com/)
 
 ## Setup
