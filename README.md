@@ -1,4 +1,4 @@
-# Space Travelers' Hub
+# Covid Reporter
 This web application is built to display covid-19 data of countries affected by pandemic. The application allows users to view list of countries and regions/cities affected.
 
 ![Home Page](./src/images/covid-home.png)
@@ -11,19 +11,24 @@ This web application is built to display covid-19 data of countries affected by 
 - CSS
 
 ## Live Demo
-
-- [View video](https://www.loom.com/share/2f173a6ca1594c60a9e760d6d6ef74a3)
+- [View Video](https://www.loom.com/share/2f173a6ca1594c60a9e760d6d6ef74a3)
 - [View Demo](https://duls-covid-reporter.herokuapp.com/)
-  
+
 ## Setup
-- Get the link of the repository: [https://github.com/wuyepabdul/react-capstone](https://github.com/wuyepabdul/react-capstone)
-- Clone it as [git@github.com:wuyepabdul/react-capstone.git](git@github.com:wuyepabdul/react-capstone.git) on a Terminal
-- Usage
-- Run npm install on a Terminal to install the modules
-- Run npm start on a Terminal to start the server
+**To clone this project**
+- Run command: $ `git clone https://github.com/wuyepabdul/math-magician.git` in your terminal
+- or press the green Code button in the upper right corner and choose to download from the Download ZIP link.**
+- Run command: `npm install` after cloning the project in your Terminal to install the project dependencies
+- Run command: `npm start start the server`
 - Open http://localhost:3000 to view it in the browser.
-  
-## Authors
+
+
+## Run Tests
+
+- `cd react-capstone` 
+- Run command: `npm run test`
+
+## Author
 
 👤 **Abdul Wuyep**
 
