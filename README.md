@@ -9,6 +9,7 @@ This web application is built to display covid-19 data of countries affected by 
 - JavaScript/React
 - Redux
 - CSS
+- JSX
 
 ## Live Demo
 - [View Video](https://www.loom.com/share/a956a1d0a232441cbd37290881729858)
