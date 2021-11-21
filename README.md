@@ -17,7 +17,7 @@ This web application is built to display covid-19 data of countries affected by 
 
 ## Setup
 **To clone this project**
-- Run command: $ `git clone https://github.com/wuyepabdul/math-magician.git` in your terminal
+- Run command: $ `git clone https://github.com/wuyepabdul/react-capstone.git` in your terminal
 - or press the green Code button in the upper right corner and choose to download from the Download ZIP link.**
 - Run command: `npm install` after cloning the project in your Terminal to install the project dependencies
 - Run command: `npm start start the server`
